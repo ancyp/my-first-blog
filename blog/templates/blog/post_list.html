@@ -20,7 +20,16 @@
               Every hour, Every minute I miss you! <br>
             <h2>  Be mine forever please? <h2>
 
-            </p>  </div>
+            </p>
+          </div>
+
+          {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
 
     </body>
